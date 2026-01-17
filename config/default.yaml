@@ -1,0 +1,55 @@
+# 自动化教学课程录制系统 - 默认配置
+
+# 输入输出路径
+paths:
+  input_dir: "./input"
+  output_dir: "./output"
+  temp_dir: "./tmp"
+  logs_dir: "./logs"
+  test_ppts_dir: "./tests/test_ppts"
+
+# TTS设置
+tts:
+  primary_engine: "gtts"      # gTTS | espeak | say
+  language: "zh-cn"
+  speed: 0.9                    # 0.1-2.0，0.9适合教学
+  volume: 1.0                   # 0.0-1.0
+  cache_enabled: true
+  cache_dir: "./cache/audio"
+
+# 视频设置
+video:
+  resolution: "1920x1080"      # 1920x1080 | 1280x720
+  frame_rate: 30                # 24 | 30 | 60
+  bitrate: "5M"                 # 码率
+  codec: "libx264"
+  audio_codec: "aac"
+  audio_bitrate: "128k"
+
+# 脚本生成设置
+script:
+  mode: "template"              # template | ai | hybrid
+  template_file: "./templates/teaching_script.txt"
+  ai_enabled: false
+  ai_model: "ollama"            # ollama | openai
+  max_tokens: 200
+
+# 日志设置
+logging:
+  level: "INFO"                 # DEBUG | INFO | WARNING | ERROR
+  console_output: true
+  file_output: true
+  max_file_size: "10MB"
+  backup_count: 5
+
+# 性能设置
+performance:
+  max_workers: 4                # 并行处理线程数
+  batch_size: 5
+  memory_limit_mb: 2048
+
+# 错误处理
+error_handling:
+  retry_attempts: 3
+  retry_delay: 5                 # 秒
+  fallback_enabled: true
