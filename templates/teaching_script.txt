@@ -1,0 +1,102 @@
+# 教学脚本模板文件
+# 变量说明:
+# {title}: 幻灯片标题
+# {content}: 幻灯片内容列表
+# {page}: 页码
+# {chapter}: 章节号
+# {total_pages}: 总页数
+# {course_name}: 课程名称
+
+# 开场白模板
+TEMPLATE_INTRO = """
+欢迎来到{course_name}课程。{pause}
+现在我们开始学习第{page}页的内容：{title}。{pause}
+让我们一起来看看这一页有哪些要点需要掌握。
+"""
+
+# 标题页模板
+TEMPLATE_TITLE_SLIDE = """
+欢迎大家！{pause}
+今天我们要学习的是：{title}。{pause}
+这一部分是非常重要的基础知识，{pause}
+请大家认真听讲，{pause}
+我们马上开始。
+"""
+
+# 知识点详细讲解模板
+TEMPLATE_CONTENT_DETAILED = """
+现在我们来看第{page}页的内容：{title}。{pause}
+{content_intro}
+{content_points}
+让我们详细了解一下。
+"""
+
+# 知识点简要讲解模板
+TEMPLATE_CONTENT_BRIEF = """
+接下来是第{page}页：{title}。{pause}
+{content_summary}
+这一部分我们就介绍到这里。
+"""
+
+# 内容朗读模板
+TEMPLATE_CONTENT_ONLY = """
+我们来看第{page}页的内容：{pause}
+{content朗读}
+请大家跟着我的讲解一起学习。
+"""
+
+# 列表项讲解模板
+TEMPLATE_LIST_CONTENT = """
+{content_list}
+{content_explanation}
+"""
+
+# 表格讲解模板
+TEMPLATE_TABLE_CONTENT = """
+现在我们来看这个表格：{title}。{pause}
+{table_description}
+让我们逐一了解每个部分。
+"""
+
+# 过渡语模板 - 下一页
+TEMPLATE_TRANSITION_NEXT = """
+好的，{previous_title}这部分内容我们就讲到这里。{pause}
+接下来我们看下一页内容：{next_title}。{pause}
+请大家继续认真听讲。
+"""
+
+# 过渡语模板 - 重点内容
+TEMPLATE_TRANSITION_IMPORTANT = """
+这里需要特别注意，{important_note}。{pause}
+这是非常重要的知识点，{pause}
+请大家记住。
+"""
+
+# 过渡语模板 - 小结
+TEMPLATE_TRANSITION_SUMMARY = """
+现在让我们总结一下这一部分的内容：{summary}。{pause}
+大家有什么问题可以提出来。
+"""
+
+# 结尾模板
+TEMPLATE_OUTRO = """
+好的，今天的课程内容我们就讲到这里。{pause}
+我们学习了{summary_topics}。{pause}
+课后请大家认真复习，{pause}
+我们下节课再见！
+"""
+
+# 特殊标记说明:
+# {pause} - 停顿标记，表示语音合成时需要适当停顿
+# {content_intro} - 内容介绍
+# {content_points} - 内容要点
+# {content_summary} - 内容摘要
+# {content朗读} - 内容朗读
+# {content_list} - 列表内容
+# {content_explanation} - 内容解释
+# {table_description} - 表格描述
+# {previous_title} - 上一页标题
+# {next_title} - 下一页标题
+# {important_note} - 重要提示
+# {summary} - 总结
+# {summary_topics} - 总结主题

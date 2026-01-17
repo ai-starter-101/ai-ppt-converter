@@ -4,7 +4,8 @@
 python-pptx==0.6.21
 
 # 文本转语音
-gtts==2.4.0
+gtts==2.5.4
+edge-tts==7.2.7
 
 # 音频处理
 pydub==0.25.1
